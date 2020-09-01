@@ -230,7 +230,7 @@ export const showRpcError = async (
   refresh: boolean = false,
 ): Promise<void> => {
   await showError(
-    'An RPC Error has occurred',
+    'An RPC Error has occurredd',
     'RPC',
     error.err_message,
     error.err_details,
