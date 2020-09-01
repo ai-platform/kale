@@ -115,10 +115,10 @@ export const executeRpc = async (
     output =
       env instanceof NotebookPanel
         ? await NotebookUtils.sendKernelRequestFromNotebook(
-            env,
-            cmd,
-            expressions,
-          )
+          env,
+          cmd,
+          expressions,
+        )
         : await NotebookUtils.sendKernelRequest(env, cmd, expressions);
   } catch (e) {
     console.warn(e);
@@ -293,7 +293,7 @@ export const _legacy_executeRpcAndShowRPCError = async (
     return result;
   } catch (error) {
     if (error instanceof RPCError) {
-      await error.showDialog();
+      //await error.showDialog();
       return null;
     }
     throw error;
